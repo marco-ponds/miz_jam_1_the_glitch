@@ -1,0 +1,4 @@
+{
+    "name": "TheGlitch",
+    "routes": [{ "src": "/", "dest": "/index.html" }]
+}
