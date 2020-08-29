@@ -4,7 +4,7 @@ import Intro from './intro';
 import First from './first';
 import Level from './level';
 
-store.createStore({}, {}, true);
+store.createStore(() => {}, {}, true);
 
 const assets = {
     Models: {
