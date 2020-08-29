@@ -120,11 +120,13 @@ class FirstScene extends BaseScene {
 
         Scripts.create('player', PlayerScript);
 
+        PostProcessing.add(constants.EFFECTS.PIXEL, { pixelSize: 4 });
+
         this.buildMap();
         this.addPlayer();
 
         this.enemies = {};
-        this.addEnemies();
+        // this.addEnemies();
     }
 }
 

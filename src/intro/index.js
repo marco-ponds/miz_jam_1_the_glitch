@@ -61,6 +61,7 @@ class FirstScene extends BaseScene {
         pc.keyboard.setWireframe(true);
 
         PostProcessing.add(constants.EFFECTS.SELECTIVE_OUTLINE, { selectedObjects: [pc.keyboard, pc.case, pc.monitor] });
+        PostProcessing.add(constants.EFFECTS.PIXEL, { pixelSize: 4 });
         const glitch = PostProcessing.add(constants.EFFECTS.GLITCH);
     }
 }
