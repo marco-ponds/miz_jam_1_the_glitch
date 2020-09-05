@@ -30,6 +30,6 @@
         "webpack-cli": "^3.3.11"
     },
     "dependencies": {
-        "mage-engine": "2.11.0"
+        "mage-engine": "2.12.0"
     }
 }
