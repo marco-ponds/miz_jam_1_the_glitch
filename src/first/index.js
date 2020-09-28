@@ -1,5 +1,5 @@
 import {
-    BaseScene,
+    Level,
     Scene,
     AmbientLight,
     Sprite,
@@ -12,7 +12,7 @@ const WHITE = '#FFFFFF';
 
 import { MAP_HEIGHT, MAP_WIDTH, SPRITE_MAP, first, getPositionFromRowAndCol,  SPRITE_SIZE, first_opacity } from '../levels';
 
-class FirstScene extends BaseScene {
+class FirstScene extends Level {
 
     progressAnimation = (callback) => {
         const loader = document.querySelector('.loader');

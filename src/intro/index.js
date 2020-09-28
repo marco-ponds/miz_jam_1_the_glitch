@@ -1,5 +1,5 @@
 import {
-    BaseScene,
+    Level,
     Scene,
     AmbientLight,
     Models,
@@ -14,7 +14,7 @@ const BACKGROUND = '#2f3640';
 const WHITE = '#FFFFFF';
 
 
-class FirstScene extends BaseScene {
+class FirstScene extends Level {
 
     progressAnimation = (callback) => {
         const loader = document.querySelector('.loader');

@@ -27,8 +27,16 @@ export default class Player extends BaseScript {
         this.camera = Scene.getCamera();
 
         this.mesh.setColliders(
-            [VECTOR_DOWN, VECTOR_LEFT, VECTOR_RIGHT],
-            [{ far: 1, near: 0, offset: { y: -0.05 } }, { far: 1, near: 0 }, { far: 1, near: 0 }]
+            [
+                VECTOR_DOWN,
+                VECTOR_LEFT,
+                VECTOR_RIGHT
+            ],
+            [
+                { far: 0.1, near: 0, offset: { y: -0.05 }, debug: true },
+                { far: 0.1, near: 0, debug: true  },
+                { far: 0.1, near: 0, debug: true  }
+            ]
         );
         
         this.movement = {
@@ -47,8 +55,8 @@ export default class Player extends BaseScript {
         this.mass = 1;
         this.gravity = 1;
 
-        this.jump = 0.3;
-        this.maxSpeed = 1;
+        this.jumpSpeed = 0.5;
+        this.maxSpeed = 0.6;
         this.maxReverseSpeed = -this.maxSpeed;
 
         this.speed = 0;
@@ -124,7 +132,7 @@ export default class Player extends BaseScript {
             this.speed_y -= this.gravity * this.mass * dt;
 
             if (this.movement.space) {
-                this.speed_y = this.jump;
+                this.speed_y = this.jumpSpeed;
                 this.canJump = false;
             }
         }

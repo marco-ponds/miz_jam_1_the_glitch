@@ -1,5 +1,5 @@
 import {
-    BaseScene,
+    Level,
     Scene,
     AmbientLight,
     Sprite,
@@ -27,7 +27,7 @@ import {
     ENEMIES_POSITIONS
 } from '../levels';
 
-class FirstScene extends BaseScene {
+class FirstScene extends Level {
 
     progressAnimation = (callback) => {
         const loader = document.querySelector('.loader');
